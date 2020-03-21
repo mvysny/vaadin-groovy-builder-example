@@ -19,4 +19,4 @@ jobs:
       with:
         java-version: ${{ matrix.java }}
     - name: Build with Gradle
-      run: ./gradlew clean build -Pvaadin.productionMode
+      run: "./gradlew clean build -Pvaadin.productionMode"
