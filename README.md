@@ -1,3 +1,5 @@
+![Java CI](https://github.com/mvysny/vaadin-groovy-builder-example/workflows/Java%20CI/badge.svg)
+
 # Vaadin 14 Groovy Builder Example App / Archetype
 
 This project can be used as a starting point to create your own Vaadin 14+ application.
