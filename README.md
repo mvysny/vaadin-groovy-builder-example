@@ -1,12 +1,11 @@
 # Vaadin 14 Groovy Builder Example App / Archetype
 
-This project can be used as a starting point to create your own Vaadin 10+ application.
+This project can be used as a starting point to create your own Vaadin 14+ application.
 It has the necessary dependencies and files to get you started.
 Just clone this repo and start experimenting! Import it to the IDE of your choice as a Gradle project.
                                               
-Uses [Karibu-DSL](https://github.com/mvysny/karibu-dsl) Kotlin bindings to the [Vaadin](https://vaadin.com/flow) framework.
-
-[Online Demo of this app](https://karibu10-helloworld-app.herokuapp.com) running on Heroku.
+Uses [Vaadin Groovy Builder](https://github.com/mvysny/vaadin-groovy-builder) Groovy
+bindings to the [Vaadin](https://vaadin.com) framework.
 
 # Preparing Environment
 
@@ -30,8 +29,8 @@ Also make sure that you have Java 8 (or higher) JDK installed.
 To quickly start the app, just type this into your terminal:
 
 ```bash
-git clone https://github.com/mvysny/karibu10-helloworld-application
-cd karibu10-helloworld-application
+git clone https://github.com/mvysny/vaadin-groovy-builder-example
+cd vaadin-groovy-builder-example
 ./gradlew appRun
 ```
 
@@ -45,7 +44,7 @@ via Gretty's `./gradlew appRun`. The Ultimate edition will allow you to run the
 project in Tomcat - this is the recommended
 option for a real development.
 
-> This is a port of [Skeleton Starter Flow](https://github.com/vaadin/skeleton-starter-flow) to Kotlin+Gradle.
+> This is a port of [Skeleton Starter Flow](https://github.com/vaadin/skeleton-starter-flow) to Groovy+Gradle.
 
 ## Supported Modes
 
@@ -118,20 +117,16 @@ Let's look at all files that this project is composed of, and what are the point
 | [gradlew](gradlew), [gradlew.bat](gradlew.bat), [gradle/](gradle) | Gradle runtime files, so that you can build your app from command-line simply by running `./gradlew`, without having to download and install Gradle distribution yourself.
 | [.travis.yml](.travis.yml) | Configuration file for [Travis-CI](http://travis-ci.org/) which tells Travis how to build the app. Travis watches your repo; it automatically builds your app and runs all the tests after every commit.
 | [.gitignore](.gitignore) | Tells [Git](https://git-scm.com/) to ignore files that can be produced from your app's sources - be it files produced by Gradle, Intellij project files etc.
-| [src/main/resources/](src/main/resources) | A bunch of static files not compiled by Kotlin in any way; see below for explanation.
+| [src/main/resources/](src/main/resources) | A bunch of static files not compiled by Groovy in any way; see below for explanation.
 | [simplelogger.properties](src/main/resources/simplelogger.properties) | We're using [Slf4j](https://www.slf4j.org/) for logging and this is the configuration file for [Slf4j Simple Logger](https://www.slf4j.org/api/org/slf4j/impl/SimpleLogger.html).
 | [webapp/](src/main/webapp) | static files provided as-is to the browser.
-| [src/main/kotlin/](src/main/kotlin) | The main Kotlin sources of your web app. You'll be mostly editing files located in this folder.
-| [MainView.kt](src/main/kotlin/com/vaadin/flow/demo/helloworld/MainView.kt) | When Servlet Container (such as [Tomcat](http://tomcat.apache.org/)) starts your app, it will show the components attached to the main route, in this case, the `MainView` class.
-| [MainViewTest.kt](src/test/kotlin/com/vaadin/flow/demo/helloworld/MainViewTest.kt) | Automatically run by Gradle to test your UI; see [Karibu Testing](https://github.com/mvysny/karibu-testing) for more information.
+| [src/main/groovy/](src/main/groovy) | The main Groovy sources of your web app. You'll be mostly editing files located in this folder.
+| [MainView.kt](src/main/groovy/com/vaadin/flow/demo/helloworld/MainView.groovy) | When Servlet Container (such as [Tomcat](http://tomcat.apache.org/)) starts your app, it will show the components attached to the main route, in this case, the `MainView` class.
+| [MainViewTest.kt](src/test/groovy/com/vaadin/flow/demo/helloworld/MainViewTest.groovy) | Automatically run by Gradle to test your UI; see [Karibu Testing](https://github.com/mvysny/karibu-testing) for more information.
 
 # More Resources
 
 * The DSL technique is used to allow you to nest your components in a structured code. This is provided by the
-  Karibu-DSL library; please visit the [Karibu-DSL home page](https://github.com/mvysny/karibu-dsl) for more information.
-* The browserless testing is demonstrated in the [MainViewTest.kt](src/test/kotlin/com/vaadin/flow/demo/helloworld/MainViewTest.kt) file.
+  Vaadin Groovy Builder library; please visit the [Vaadin Groovy Builder home page](https://github.com/mvysny/vaadin-groovy-builder) for more information.
+* The browserless testing is demonstrated in the [MainViewTest.groovy](src/test/groovy/com/vaadin/flow/demo/helloworld/MainViewTest.groovy) file.
   Please read [Browserless Web Testing](https://github.com/mvysny/karibu-testing) for more information.
-* For more complex example which includes multiple pages, please see the [Beverage Buddy Karibu-DSL example-v10 app](https://github.com/mvysny/karibu-dsl#quickstart-vaadin-10-flow).
-  It is a port of the Vaadin official Java [Beverage Buddy App Starter](https://github.com/vaadin/beverage-starter-flow) to Kotlin + Karibu DSL.
-* For information on how to connect the UI to the database backend please visit [Vaadin-on-Kotlin](http://www.vaadinonkotlin.eu/)
-  You can find a complete CRUD example at [Vaadin-on-Kotlin vok-example-flow-sql2o](https://github.com/mvysny/vaadin-on-kotlin#vaadin-10-flow-example-project).
