@@ -13,8 +13,6 @@ defaultTasks("clean", "build")
 
 repositories {
     jcenter()
-    // @todo remove this when https://github.com/mvysny/vaadin-groovy-builder hits jcenter
-    maven { setUrl("https://dl.bintray.com/mvysny/github") }
 }
 
 gretty {
