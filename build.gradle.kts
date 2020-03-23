@@ -30,7 +30,7 @@ tasks.withType<Test> {
 
 dependencies {
     // Karibu-DSL dependency
-    implementation("com.github.mvysny.vaadin-groovy-builder:vaadin-groovy-builder-v14:0.0.1")
+    implementation("com.github.mvysny.vaadin-groovy-builder:vaadin-groovy-builder-v14:0.0.2")
 
     // Vaadin 14
     implementation("com.vaadin:vaadin-core:${vaadin_version}") {
