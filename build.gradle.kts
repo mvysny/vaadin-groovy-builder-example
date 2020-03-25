@@ -7,7 +7,7 @@ plugins {
     id("com.vaadin") version "0.6.0"
 }
 
-val vaadin_version = "14.1.19"
+val vaadin_version = "14.1.20"
 
 defaultTasks("clean", "build")
 
@@ -30,7 +30,7 @@ tasks.withType<Test> {
 
 dependencies {
     // Karibu-DSL dependency
-    implementation("com.github.mvysny.vaadin-groovy-builder:vaadin-groovy-builder-v14:0.0.2")
+    implementation("com.github.mvysny.vaadin-groovy-builder:vaadin-groovy-builder-v14:0.0.4")
 
     // Vaadin 14
     implementation("com.vaadin:vaadin-core:${vaadin_version}") {
