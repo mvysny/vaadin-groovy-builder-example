@@ -7,7 +7,7 @@ plugins {
     id("com.vaadin") version "0.6.0"
 }
 
-val vaadin_version = "14.1.20"
+val vaadin_version = "14.1.23"
 
 defaultTasks("clean", "build")
 
@@ -47,6 +47,6 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:1.7.30")
 
     // test support
-    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v10-groovy:1.1.20")
+    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v10-groovy:1.1.23")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.6.0")
 }
