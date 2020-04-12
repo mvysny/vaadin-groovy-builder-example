@@ -39,8 +39,7 @@ cd vaadin-groovy-builder-example
 Gradle will automatically download an embedded servlet container (Jetty) and will run your app in it. Your app will be running on
 [http://localhost:8080](http://localhost:8080).
 
-Since the build system is a Gradle file written in Kotlin, we suggest you
-use [Intellij IDEA](https://www.jetbrains.com/idea/download)
+We suggest you use [Intellij IDEA](https://www.jetbrains.com/idea/download)
 to edit the project files. The Community edition is enough to run the server
 via Gretty's `./gradlew appRun`. The Ultimate edition will allow you to run the
 project in Tomcat - this is the recommended
