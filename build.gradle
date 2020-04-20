@@ -28,7 +28,7 @@ test {
 
 dependencies {
     // Karibu-DSL dependency
-    implementation "com.github.mvysny.vaadin-groovy-builder:vaadin-groovy-builder-v14:0.0.4"
+    implementation "com.github.mvysny.vaadin-groovy-builder:vaadin-groovy-builder-v14:0.0.7"
 
     // Vaadin 14
     implementation("com.vaadin:vaadin-core:${vaadin_version}") {
