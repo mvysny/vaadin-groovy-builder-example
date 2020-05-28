@@ -1,11 +1,11 @@
 plugins {
     id 'groovy'
-    id "org.gretty" version "3.0.1"
+    id "org.gretty" version "3.0.3"
     id 'war'
-    id "com.vaadin" version "0.6.0"
+    id "com.vaadin" version "0.7.0"
 }
 
-def vaadin_version = "14.1.25"
+def vaadin_version = "14.2.0"
 
 defaultTasks("clean", "build")
 
@@ -28,7 +28,7 @@ test {
 
 dependencies {
     // Karibu-DSL dependency
-    implementation "com.github.mvysny.vaadin-groovy-builder:vaadin-groovy-builder-v14:0.0.7"
+    implementation "com.github.mvysny.vaadin-groovy-builder:vaadin-groovy-builder-v14:0.0.8"
 
     // Vaadin 14
     implementation("com.vaadin:vaadin-core:${vaadin_version}") {
@@ -45,6 +45,10 @@ dependencies {
     implementation "org.slf4j:slf4j-simple:1.7.30"
 
     // test support
-    testImplementation "com.github.mvysny.kaributesting:karibu-testing-v10-groovy:1.1.23"
+    testImplementation "com.github.mvysny.kaributesting:karibu-testing-v10-groovy:1.1.24"
     testImplementation "org.junit.jupiter:junit-jupiter-engine:5.6.0"
+}
+
+vaadin {
+    pnpmEnable = true
 }
