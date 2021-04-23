@@ -1,11 +1,11 @@
 plugins {
     id 'groovy'
-    id "org.gretty" version "3.0.3"
+    id "org.gretty" version "3.0.4"
     id 'war'
-    id "com.vaadin" version "0.14.3.7"
+    id "com.vaadin" version "0.14.5.1"
 }
 
-def vaadin_version = "14.5.1"
+def vaadin_version = "14.5.3"
 
 defaultTasks("clean", "build")
 
@@ -46,10 +46,6 @@ dependencies {
 
     // test support
     testImplementation "com.github.mvysny.kaributesting:karibu-testing-v10-groovy:1.2.12"
-    testImplementation "org.junit.jupiter:junit-jupiter-engine:5.7.0"
-}
-
-vaadin {
-    pnpmEnable = true
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:5.7.1"
 }
 
