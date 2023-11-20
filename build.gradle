@@ -2,10 +2,10 @@ plugins {
     id 'groovy'
     id "org.gretty" version "3.0.6"
     id 'war'
-    id "com.vaadin" version "0.14.8.1"
+    id "com.vaadin" version "0.14.10.4"
 }
 
-def vaadin_version = "14.8.4"
+def vaadin_version = "14.10.10"
 
 defaultTasks("clean", "build")
 
